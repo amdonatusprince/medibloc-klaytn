@@ -13,7 +13,7 @@ const MyRecords = () => {
       <div className="info_section">
         <GetPatientRecord />
       </div>
-      <MyRecordDisabilities />mm
+      <MyRecordDisabilities />
       <MyRecordAllergies />
       <MyRecordOtherInformation />
     </div>

@@ -9,7 +9,7 @@ const MyRecordAllergies = () => {
   const { address } = useAccount();
   const [allergies, setAllergies] = useState(null);
 
-  const contractAddress = '0x8084B71fd847053621f36a3A87DDC885f45A467D';
+  const contractAddress = '0xBFE9cF37fEC4455cfcbd8F74417e67D8b487d331';
   const contractAbi = contractABI;
 
 

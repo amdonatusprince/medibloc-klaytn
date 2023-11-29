@@ -10,14 +10,14 @@ const AddOtherInformation = (props) => {
   const [description, setDescription] = useState("");
   const [medication, setMedication] = useState("");
 
-  const contractAddress = "0x8084B71fd847053621f36a3A87DDC885f45A467D";
+  const contractAddress = "0xBFE9cF37fEC4455cfcbd8F74417e67D8b487d331";
   const contractAbi = contractABI;
   const { address } = useAccount();
 
   const { config, loading, write } = usePrepareContractWrite({
     address: contractAddress,
     abi: contractAbi,
-    functionName: 'addOtherInformation',
+    functionName: 'addDiagnosis',
     args: [
       address,
       disease,
