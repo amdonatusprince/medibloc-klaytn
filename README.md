@@ -58,7 +58,7 @@ This is an original work by our team. We build on top of the following tooling:
 # Useful Resources
 - Demo URL: https://medibloc-klaytn.vercel.app/
 - Link to Repo: https://github.com/amdonatusprince/medibloc-klaytn/
-- Demo Video: https://youtu.be/r_8gwhwlRhg
+- Demo Video: https://youtu.be/7Ype-vcyqQw
 
 # Summary
 
