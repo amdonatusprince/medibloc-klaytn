@@ -1,6 +1,6 @@
 # Medibloc Protocol
 
-Medibloc is a healthFi that allows users to store their medical records and also donate blood to save a life which earns them token incentives and rewards with subsidized healthcare globally that they can redeem at any of our healthcare partners.
+Medibloc is a healthFi protocol that allows users to store their medical records and also donate blood to save a life which earns them token incentives and rewards with subsidized healthcare globally that they can redeem at any of our healthcare partners.
 
 # Medibloc Use Cases
 
