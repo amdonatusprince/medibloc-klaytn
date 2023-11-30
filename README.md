@@ -56,10 +56,9 @@ This is an original work by our team. We build on top of the following tooling:
 - Solidity (For smart contract scripting)
 
 # Useful Resources
-- Demo URL: https://medibloc.vercel.app/
-- Link to Repo: https://github.com/amdonatusprince/medibloc
+- Demo URL: https://medibloc-klaytn.vercel.app/
+- Link to Repo: https://github.com/amdonatusprince/medibloc-klaytn/
 - Demo Video: https://youtu.be/r_8gwhwlRhg
-- Link to Tweet: https://twitter.com/amdonatusprince/status/1726477875480875246?s=46&t=xNxTZM0CM2IJUJavjzwbqQ
 
 # Summary
 
