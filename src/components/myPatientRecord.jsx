@@ -30,9 +30,9 @@ const GetPatientRecord = () => {
     try {
       // Check if data is available and not loading
       if (!isLoading && !isError && records) {
-        setBloodGroup(records[0]);
-        setGenotype(records[1]);
-        setWeight(records[2].toString());
+        setBloodGroup(records['bloodGroup']);
+        setGenotype(records['genotype']);
+        setWeight(records['weight'].toString());
       }
     } catch (error) {
       console.error('Error:', error);

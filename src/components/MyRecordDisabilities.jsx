@@ -6,10 +6,10 @@ import '../css/getPatientRecord.css';
 
 const GetDisability = () => {
   const { address } = useAccount();
-  const [disability, setDisability] = useState(null);
   const [diagnosisDate, setDiagnosisDate] = useState(null);
   const [description, setDescription] = useState(null);
   const [medication, setMedication] = useState(null);
+  const [disability, setDisability] = useState(null);
 
   const contractAddress = '0xBFE9cF37fEC4455cfcbd8F74417e67D8b487d331';
   const contractAbi = contractABI;
@@ -21,42 +21,42 @@ const GetDisability = () => {
     args: [address],
   });
 
-
-  const handleClick = () => {
-    try {
-      // Check if data is available and not loading
-      if (!disabilityLoading && !disabilityError && disabilityData) {
-        const [disability, diagnosisDate, description, medication] = disabilityData;
-        setDisability(disability);
-        setDiagnosisDate(diagnosisDate.toNumber());
-        setDescription(description);
-        setMedication(medication);
+ 
+ 
+    const getDisability = () => {
+      try {
+        if ( !disabilityLoading && !disabilityError && disabilityRecord) {
+          setDisability(disabilityRecord);
+        }
+      } catch (error) {
+        console.error('Error fetching allergy data:', error);
       }
-    } catch (error) {
-      console.error('Error retrieving disability:', error);
-    }
   };
 
+  // console.log('record', disability)
   return (
     <div className="my_record_disability">
       <h3>Disabilities</h3>
       <div className="disabilities_card">
+      <img src={no_records} alt="" />
         {disability ? (
-          <>
-            <img src={disability.image} alt="" />
-            <p>Disability: {description}</p>
-            <p>Diagnosis Date: {diagnosisDate}</p>
-            <p>Medication: {medication}</p>
-          </>
+            disability.map(data => (
+            <div className="disabilities_card" key={data._diabilityName}>
+              <p>Allergy Name: {data.name}</p>
+              <p>Description: {data.description}</p>
+              <p>Diagnosis Date: {data.diagnosisDate}</p>
+              <p>Medication: {data.medication}</p>
+            </div>
+          ))
         ) : (
           <>
-            <img src={no_records} alt="" />
+            
             <p>No Record Yet</p>
           </>
         )}
       </div>
       <div className="get-disability-btn">
-          <button onClick={handleClick}>Get Disability</button>
+          <button onClick={getDisability}>Get Disability</button>
       </div>
     </div>
   );

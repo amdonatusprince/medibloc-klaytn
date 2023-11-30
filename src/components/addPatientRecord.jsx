@@ -10,7 +10,6 @@ const AddPatientRecord = () => {
   const [bloodGroup, setBloodGroup] = useState('');
   const [genotype, setGenotype] = useState('');
   const [weight, setWeight] = useState('');
-0xBFE9cF37fEC4455cfcbd8F74417e67D8b487d331
   const { config } = usePrepareContractWrite({
     address: '0xBFE9cF37fEC4455cfcbd8F74417e67D8b487d331',
     abi: contractAbi,

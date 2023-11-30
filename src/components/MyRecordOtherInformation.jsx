@@ -19,16 +19,12 @@ const MyRecordOtherInformation = () => {
   });
 
 
+  // console.log('record', result)
+
   const getOtherInformation = async () => {
     try {
-      if (!isLoading && !isError && records) {
-        setOtherInformation({
-          _title: result[0],
-          _diagnosedDate: result[1],
-          _disease: result[2],
-          _description: result[3],
-          _medication: result[4]
-        });
+      if (!isLoading && !isError && result) {
+        setOtherInformation(result);
       }
 
     } catch (error) {
@@ -37,6 +33,7 @@ const MyRecordOtherInformation = () => {
     }
   };
 
+
   return (
     <>
     <div className="my_record_other-information">
@@ -44,13 +41,15 @@ const MyRecordOtherInformation = () => {
       <div className="disabilities_card">
         <img src={no_records} alt="" />
         {otherInformation ? (
-          <>
-            <p>Title: {otherInformation._title}</p>
-            <p>Diagnosed Date: {new Date(otherInformation._diagnosedDate).toLocaleString()}</p>
-            <p>Disease: {otherInformation._disease}</p>
-            <p>Description: {otherInformation._description}</p>
-            <p>Medication: {otherInformation._medication}</p>
-          </>
+            otherInformation.map(data => (
+              <div className="disabilities_card" key={data._diabilityName}>
+                <p>Title: {data.name}</p>
+                <p>Description: {data.description}</p>
+                <p>Diagnosis Date: {data.diagnosisDate}</p>
+                <p>Medication: {data.medication}</p>
+              </div>
+            ))
+          
         ) : (
           <p>No Record Yet</p>
         )}

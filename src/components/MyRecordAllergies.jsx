@@ -20,7 +20,7 @@ const MyRecordAllergies = () => {
     args: [address],
   });
 
-
+// console.log(allergiesData)
   const getAllergy = () => {
     try {
       if (!allergyLoading && !allergyError && allergiesData) {
@@ -37,7 +37,7 @@ const MyRecordAllergies = () => {
       {allergies ? (
         allergies.map(allergy => (
           <div className="disabilities_card" key={allergy._allergyName}>
-            <p>Allergy Name: {allergy.allergyName}</p>
+            <p>Allergy Name: {allergy.name}</p>
             <p>Description: {allergy.description}</p>
             <p>Start Date: {allergy.startDate}</p>
             <p>Medication: {allergy.medication}</p>

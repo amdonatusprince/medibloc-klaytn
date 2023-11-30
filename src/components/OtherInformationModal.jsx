@@ -6,7 +6,6 @@ import contractABI from "./contractABI.json";
 const AddOtherInformation = (props) => {
   const [title, setTitle] = useState("");
   const [diagnosedDate, setDiagnosedDate] = useState("");
-  const [disease, setDisease] = useState("");
   const [description, setDescription] = useState("");
   const [medication, setMedication] = useState("");
 
@@ -14,27 +13,26 @@ const AddOtherInformation = (props) => {
   const contractAbi = contractABI;
   const { address } = useAccount();
 
-  const { config, loading, write } = usePrepareContractWrite({
+  const { config, loading, } = usePrepareContractWrite({
     address: contractAddress,
     abi: contractAbi,
     functionName: 'addDiagnosis',
     args: [
       address,
-      disease,
+      title,
       diagnosedDate,
       description,
       medication
     ],
   });
 
-  const { isLoading, isSuccess } = useContractWrite(config);
+  const { isLoading, isSuccess, write } = useContractWrite(config);
 
   const addOtherInformation = async () => {
     try {
       await write();
       setTitle("");
       setDiagnosedDate("");
-      setDisease("");
       setDescription("");
       setMedication("");
       props.onClose();
@@ -54,10 +52,10 @@ const AddOtherInformation = (props) => {
           <h2>Any other Disease state?</h2>
         </div>
         <div className="modal_body">
-          <h4>Title of</h4>
+          <h4>Title of Disease</h4>
           <input
             type="text"
-            placeholder="What kind of sickness?"
+            placeholder="Name of sickness?"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
@@ -67,13 +65,6 @@ const AddOtherInformation = (props) => {
             placeholder="YYYY-MM-DD"
             value={diagnosedDate}
             onChange={(e) => setDiagnosedDate(e.target.value)}
-          />
-          <h4>Disease</h4>
-          <input
-            type="text"
-            placeholder="Name of sickness?"
-            value={disease}
-            onChange={(e) => setDisease(e.target.value)}
           />
           <h4>Description</h4>
           <input
