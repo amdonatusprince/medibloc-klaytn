@@ -44,7 +44,7 @@ Medibloc is a healthFi that allows users to store their medical records and also
 
 - https://baobab.klaytnscope.com/tx/0xb313d3d41cbd30855709d4ec5762f08a00975455a1b30796b835614d2deb702b
 
-- https://baobab.klaytnscope.com/tx/0x0f646938cce3273578c87868d5ba4ab14f508647526307329f6bcb16382e2850?tabId=internalTx
+- https://baobab.klaytnscope.com/tx/0x0f646938cce3273578c87868d5ba4ab14f508647526307329f6bcb16382e2850
 
 
 # Originality
