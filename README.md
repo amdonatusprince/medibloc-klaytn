@@ -34,17 +34,17 @@ Medibloc is a healthFi that allows users to store their medical records and also
 
 # Network Information
 
-#### Network: Toronet Testnet
-#### Contract Address: 0x8084B71fd847053621f36a3A87DDC885f45A467D
+#### Network: Klaytn Baobab
+#### Contract Address: 0xbfe9cf37fec4455cfcbd8f74417e67d8b487d331
 
  ### Transactions
-- https://testnet.toronet.org/tx.html?id=0x7a2aa957b0e1e223f5b0d3ec6c90cec0d1071683f68a46ef32de4c58cd6bc7ea
+- https://baobab.klaytnscope.com/tx/0xd073cd10dea1cd5fd9051be4dd5d76ed11dc74f8002adf99ef49e37d0adc6fd2
   
-- https://testnet.toronet.org/tx.html?id=0xd099d5c41485f342002eb59a6c7f976d1cfb637cee1bbf84c65c00628245dccf
+- https://baobab.klaytnscope.com/tx/0x97f728bd3fc1f7dcd8838baa381ad9d274266ad17ab812c381dd2e31b0296a50
 
-- https://testnet.toronet.org/tx.html?id=0x8cb5246bdf25338686172bcc6f585e708f822504b877d76dcc3005bf3c4321db
+- https://baobab.klaytnscope.com/tx/0xb313d3d41cbd30855709d4ec5762f08a00975455a1b30796b835614d2deb702b
 
-- https://testnet.toronet.org/tx.html?id=0x2ce40be61cdf8071bc3da43b22c0c746e60d09754df63611cc9177d3c6eb4e27
+- https://baobab.klaytnscope.com/tx/0x0f646938cce3273578c87868d5ba4ab14f508647526307329f6bcb16382e2850?tabId=internalTx
 
 
 # Originality
@@ -52,7 +52,7 @@ Medibloc is a healthFi that allows users to store their medical records and also
 This is an original work by our team. We build on top of the following tooling: 
 
 - React (For the frontend)
-- Wagmi (For interacting with the Toronet Blockchain)
+- Wagmi (For interacting with the Klaytn Baobab Blockchain)
 - Solidity (For smart contract scripting)
 
 # Useful Resources
